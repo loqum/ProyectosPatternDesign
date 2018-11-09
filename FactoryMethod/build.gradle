@@ -6,13 +6,13 @@
  * user guide available at https://docs.gradle.org/4.3/userguide/java_library_plugin.html
  */
 
-// Apply the java-library plugin to add support for Java Library
-apply plugin: 'java-library'
 
-// In this section you declare where to find the dependencies of your project
+apply plugin: 'java-library'
+apply plugin: 'application'
+
+mainClassName = 'com.rfm.main.Main'
+
 repositories {
-    // Use jcenter for resolving your dependencies.
-    // You can declare any Maven/Ivy/file repository here.
     jcenter()
 }
 
@@ -26,4 +26,11 @@ dependencies {
     // Use JUnit test framework
     testImplementation 'junit:junit:4.12'
 }
+
+jar {
+	baseName = 'FactoryMethod'
+	version = '0.1.0'
+}
+	
+
 
