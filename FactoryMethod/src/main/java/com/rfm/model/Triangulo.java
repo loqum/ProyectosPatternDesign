@@ -2,11 +2,18 @@ package com.rfm.model;
 
 public abstract class Triangulo {
 
-  private int ladoA;
-  private int ladoB;
-  private int ladoC;
+  private double ladoA;
+  private double ladoB;
+  private double ladoC;
 
-  public Triangulo(int ladoA, int ladoB, int ladoC) {
+  /**
+   * Constructor completo de la clase Triangulo.
+   * 
+   * @param ladoA Cateto x.
+   * @param ladoB Cateto y.
+   * @param ladoC Cateto z.
+   */
+  public Triangulo(double ladoA, double ladoB, double ladoC) {
     this.ladoA = ladoA;
     this.ladoB = ladoB;
     this.ladoC = ladoC;
@@ -18,7 +25,7 @@ public abstract class Triangulo {
 
   public abstract void dibuja();
 
-  public int getLadoA() {
+  public double getLadoA() {
     return ladoA;
   }
 
@@ -26,7 +33,7 @@ public abstract class Triangulo {
     this.ladoA = ladoA;
   }
 
-  public int getLadoB() {
+  public double getLadoB() {
     return ladoB;
   }
 
@@ -34,7 +41,7 @@ public abstract class Triangulo {
     this.ladoB = ladoB;
   }
 
-  public int getLadoC() {
+  public double getLadoC() {
     return ladoC;
   }
 

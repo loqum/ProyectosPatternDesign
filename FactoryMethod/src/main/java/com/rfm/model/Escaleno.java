@@ -2,7 +2,7 @@ package com.rfm.model;
 
 public class Escaleno extends Triangulo {
 
-  public Escaleno(int ladoA, int ladoB, int ladoC) {
+  public Escaleno(double ladoA, double ladoB, double ladoC) {
     super(ladoA, ladoB, ladoC);
   }
 
@@ -13,7 +13,10 @@ public class Escaleno extends Triangulo {
 
   @Override
   public double getSuperficie() {
-    return 0;
+    double semiperimetro;
+    semiperimetro = ((getLadoA() + getLadoB() + getLadoC()) / 2);
+    return Math.sqrt(semiperimetro * (semiperimetro - getLadoA()) * (semiperimetro - getLadoB())
+        * (semiperimetro - getLadoC()));
   }
 
   @Override

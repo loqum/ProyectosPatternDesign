@@ -6,6 +6,11 @@ import com.rfm.model.Triangulo;
 
 public class Main {
 
+  /**
+   * Punto de entrada de la aplicacion.
+   * 
+   * @param args Predeterminado.
+   */
   public static void main(String[] args) {
 
     TrianguloFactoryMethod factory = new TrianguloFactory();
