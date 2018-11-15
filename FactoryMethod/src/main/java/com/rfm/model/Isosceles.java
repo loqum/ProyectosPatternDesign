@@ -13,7 +13,14 @@ public class Isosceles extends Triangulo {
 
   @Override
   public double getSuperficie() {
-    return 0;
+    double altura = 0;
+    double area = 0;
+
+    altura = Math.sqrt((Math.pow(getLadoA(), 2)) - (Math.pow(getLadoB(), 2) / 4));
+
+    area = ((getLadoB() * altura) / 2);
+
+    return area;
   }
 
   @Override
